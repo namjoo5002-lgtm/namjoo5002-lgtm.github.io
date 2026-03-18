@@ -4,60 +4,105 @@
   <meta charset="UTF-8">
   <title>My Profile</title>
 
+  <!-- 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: sans-serif;
+      font-family: 'Pretendard', sans-serif;
     }
 
     body {
       background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
     }
 
     .card {
       background: white;
-      width: 400px;
+      width: 350px;
       padding: 30px;
-      border-radius: 20px;
+      border-radius: 25px;
       text-align: center;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .profile-img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
+      border: 4px solid #eee;
     }
 
     h1 {
-      margin-top: 10px;
+      margin-top: 15px;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      color: #777;
+      margin: 8px 0 15px;
+      font-size: 14px;
     }
 
     .section {
       margin-top: 20px;
     }
 
-    /* 🔥 갤러리 핵심 */
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
+    .section h2 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
     }
 
-    .gallery img {
-      width: 90px;
-      height: 90px;
-      object-fit: cover;
+    .section p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
       border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .github {
+      background: #333;
+    }
+
+    .instagram {
+      background: #e1306c;
     }
 
   </style>
@@ -68,26 +113,34 @@
   <div class="card">
 
     <!-- 프로필 사진 -->
-    <img src="./profile.jpg" class="profile-img">
+    <img src="profile.jpg" class="profile-img">
 
+    <!-- 이름 -->
     <h1>남주</h1>
-    <p>International Trade × Engineering</p>
+
+    <!-- 한줄 소개 -->
+    <div class="subtitle">International Trade × Engineering</div>
 
     <!-- 소개 -->
     <div class="section">
       <h2>About Me</h2>
-      <p>공학과 통상을 함께 공부하는 대학생 🚀</p>
+      <p>
+        국제통상학과에 재학 중이며<br>
+        기계공학과 전자공학에 관심이 있습니다.<br>
+        최근 f1과 농구경기 관람에 관심을 가지고 있어요 🚀
+      </p>
     </div>
 
-    <!-- 🔥 사진 여러 장 -->
+    <!-- 관심 -->
     <div class="section">
-      <h2>My Photos</h2>
+      <h2>Interest</h2>
+      <p>F1 / Engineering / Programming / Music</p>
+    </div>
 
-      <div class="gallery">
-        <img src="./profile.jpg">
-        <img src="./IMG_6041.HEIC">
-      </div>
-
+    <!-- 버튼 -->
+    <div class="buttons">
+      <a href="https://github.com/your-id" class="btn github">GitHub</a>
+      <a href="https://instagram.com/your-id" class="btn instagram">Instagram</a>
     </div>
 
   </div>
