@@ -135,11 +135,23 @@
 
     <!-- 버튼 -->
     <div class="buttons">
-      <a href="https://github.com/your-id" class="btn github">GitHub</a>
-      <a href="https://instagram.com/your-id" class="btn instagram">Instagram</a>
+      <button class="btn github" id="btn github">GitHub</button>
+      <button class="btn instagram" id="btn instagram">Instagram</button>
     </div>
 
   </div>
+  <script> 
+    const btn1 = document.getElementById("btn github");
+    const btn2 = document.getElementById("btn instagram");
+
+    btn1.addEventListener("click", () => {
+      btn1.innerText = btn1.innerText === "GitHub" ? "namjoo5002-lgtm" : "GitHub";
+    });
+
+    btn2.addEventListener("click", () => {
+      btn2.innerText = btn2.innerText === "Instagram" ? "xn_jo.8" : "Instagram";
+    });
+  </script>
 
 </body>
 </html>
